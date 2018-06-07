@@ -1,0 +1,22 @@
+{
+  "name": "bustraan.peter.exsite",
+  "version": "0.0.1",
+  "description": "A simple website that shows my ability to code with modern programming standards",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeterBustraan/ExampleWebsite.git"
+  },
+  "author": "Peter Bustraan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PeterBustraan/ExampleWebsite/issues"
+  },
+  "homepage": "https://github.com/PeterBustraan/ExampleWebsite#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
