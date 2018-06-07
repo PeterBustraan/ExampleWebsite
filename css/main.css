@@ -8,16 +8,22 @@ body {
 }
 
 /* line 5, ../sass/_styles.scss */
-p {
-  font-weight: bold;
-}
-
-/* line 8, ../sass/_styles.scss */
 a {
   color: #afbda8;
+  text-decoration: none;
+}
+/* line 4, ../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_hover-link.scss */
+a:hover, a:focus {
+  text-decoration: underline;
 }
 
-/* line 11, ../sass/_styles.scss */
+/* line 9, ../sass/_styles.scss */
+.spacer {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 13, ../sass/_styles.scss */
 .mainContent {
   width: 700px;
   display: flex;
@@ -27,23 +33,30 @@ a {
   justify-content: space-between;
   background-color: #3d3d3d;
 }
-/* line 20, ../sass/_styles.scss */
+/* line 22, ../sass/_styles.scss */
 .mainContent .sideMenu {
   width: 20%;
 }
-/* line 22, ../sass/_styles.scss */
+/* line 24, ../sass/_styles.scss */
 .mainContent .sideMenu ul {
   list-style: none;
 }
-/* line 26, ../sass/_styles.scss */
+/* line 28, ../sass/_styles.scss */
 .mainContent .sideMenu .mainMenu {
   padding-left: 1rem;
 }
-/* line 29, ../sass/_styles.scss */
+/* line 31, ../sass/_styles.scss */
 .mainContent .sideMenu .mainMenu li {
   width: 80%;
 }
-/* line 34, ../sass/_styles.scss */
+/* line 36, ../sass/_styles.scss */
 .mainContent .content {
   width: 79%;
+  display: flex;
+  justify-content: flex-start;
+}
+/* line 41, ../sass/_styles.scss */
+.mainContent .content .profile {
+  width: 20%;
+  margin-right: 1rem;
 }
