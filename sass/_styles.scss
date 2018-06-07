@@ -5,6 +5,9 @@ body {
 p {
     font-weight: bold
 }
+a {
+    color: $highlight;
+}
 .mainContent {
     width: 700px;
     display:flex;
@@ -16,8 +19,16 @@ p {
 
     .sideMenu {
         width: 20%;
-        .main-menu {
+        ul {
+            list-style: none;
+        }
 
+        .mainMenu {
+            padding-left: 1rem;
+
+            li {
+                width: 80%;
+            }
         }
     }
     .content {

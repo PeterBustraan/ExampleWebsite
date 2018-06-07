@@ -13,6 +13,11 @@ p {
 }
 
 /* line 8, ../sass/_styles.scss */
+a {
+  color: #afbda8;
+}
+
+/* line 11, ../sass/_styles.scss */
 .mainContent {
   width: 700px;
   display: flex;
@@ -22,11 +27,23 @@ p {
   justify-content: space-between;
   background-color: #3d3d3d;
 }
-/* line 17, ../sass/_styles.scss */
+/* line 20, ../sass/_styles.scss */
 .mainContent .sideMenu {
   width: 20%;
 }
-/* line 23, ../sass/_styles.scss */
+/* line 22, ../sass/_styles.scss */
+.mainContent .sideMenu ul {
+  list-style: none;
+}
+/* line 26, ../sass/_styles.scss */
+.mainContent .sideMenu .mainMenu {
+  padding-left: 1rem;
+}
+/* line 29, ../sass/_styles.scss */
+.mainContent .sideMenu .mainMenu li {
+  width: 80%;
+}
+/* line 34, ../sass/_styles.scss */
 .mainContent .content {
   width: 79%;
 }

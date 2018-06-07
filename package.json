@@ -21,6 +21,7 @@
     "grunt": "^1.0.3",
     "grunt-contrib-compass": "^1.1.1",
     "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-watch": "^1.1.0"
+    "grunt-contrib-watch": "^1.1.0",
+    "pug": "^2.0.3"
   }
 }

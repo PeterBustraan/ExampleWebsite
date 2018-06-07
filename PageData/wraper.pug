@@ -1,0 +1,31 @@
+
+block link
+    - selected = "Skills";
+-  
+    menu = [{name: 'Home',          url: '/'},
+            {name: 'Skills',        url: '/skills'},
+            {name: 'Languages',     url: '/lang'},
+            {name: 'Education',     url: '/edu'},
+            {name: 'Experience',    url: '/exp'},
+            {name: 'Activities',    url: '/active'},
+            {name: 'References',    url: '/ref'}];
+
+html(lang="eng/US")
+
+    head
+        title #{title}
+        link(rel="stylesheet",type="text/css",href="main.css")
+    body
+        div.mainContent
+            div.sideMenu
+                ul.mainMenu
+                    each item in menu
+                        li
+                            if selected == item.name
+                                a.selected(href=item.url, title=item.name)= item.name
+                            else
+                                a(href=item.url, title=item.name)= item.name
+            block content
+    footer
+        p
+            |test footer
