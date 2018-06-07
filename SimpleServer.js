@@ -11,4 +11,5 @@ exp.use(express.static(__dirname + '/script'))
 
 //Simple Page Loader
 exp.get('/style.css', (req, res)  => res.sendFile('style.css'))
+exp.get('/main.js', (req,res) => res.sendFile('main.js'))
 exp.get('/', (req, res) => res.sendFile('index.html'))

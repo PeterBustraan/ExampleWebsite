@@ -1,7 +1,5 @@
-body {
-    background-color: black;
-    color: white;
-}
-p {
-    font-weight: bold
-}
+//Sassy CSS
+
+@import "compass";
+@import "colors.scss";
+@import "styles.scss";

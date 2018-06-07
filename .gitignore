@@ -59,3 +59,12 @@ typings/
 
 # next.js build output
 .next
+
+# not sure why this isn't normally blocked
+package-lock.json
+
+# grumpy sass
+/bower_components/*
+/.sass-cache/*
+*.DS_Store
+/stylesheets/*
