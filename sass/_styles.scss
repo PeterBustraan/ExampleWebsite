@@ -3,37 +3,82 @@
 body {
     background-color: $black;
     color: $text;
+    font-family: $GeneralFont;
 }
 a {
     color: $highlight;
-    @include hover-link
+    @include hover-link;
 }
 .spacer {
     display:flex;
     justify-content: space-between;
 }
 .mainContent {
-    width: 800pt;
+    width: 70rem;
     display:flex;
     position: absolute;
     top:  10%;
     left: 25%;
     justify-content: space-between;
 
+        @media screen and (max-width: $HDWidth) {
+            left: 0;
+        }
+
+        @media screen and (max-width: $SDWidth) {
+            width: 100%;
+            display: block;
+        }
+
     .sideMenu {
         width: 10rem;
-        height: 9rem;
+        height: 15rem;
         background-color: $grey;
-
-        ul {
-            list-style: none;
+        @include clearfix;
+        
+        @media screen and (max-width: $SDWidth) {
+            height: auto;
+            min-height: 2rem;
+            width: 100%;
         }
 
         .mainMenu {
             padding-left: 1rem;
+            list-style: none;
+            margin-top: .5em;
+            @include clearfix;
 
             li {
-                width: 80%;
+                @include background-image(
+                        linear-gradient(
+                            to right,
+                            $grey,
+                            tint($grey, 20)    
+                        )
+                    );
+                margin: 0.5em 0;
+                padding-top: .5em;
+                width: 100%;
+                
+                @media screen and (max-width: $SDWidth) {
+                    float: left;
+                    width: 10rem;
+                    margin-left: 1rem;
+                }
+                
+                &:hover {
+                    @include background-image(
+                        linear-gradient(
+                            to right,
+                            tint($grey, 20),
+                            $black    
+                        )
+                    );
+                }
+
+                a {
+                    display: block;
+                }
             }
         }
     }
@@ -43,6 +88,14 @@ a {
         flex-wrap: wrap;
         justify-content: flex-start;
         background-color: $grey;
+
+        @media screen and (max-width: $SDWidth) {
+            margin: auto;
+        }
+
+        @media screen and (max-width: $TBWidth) {
+            width:100%;
+        }
         
         .profile {
             max-width: 12rem;
@@ -59,7 +112,35 @@ a {
             margin: auto;
             flex-shrink: 0;
         }
+
+        h1 {
+            margin-top: 5pt;
+            font-size: 24pt;
+        }
+        h2 {
+            margin-top: 2pt;
+            font-size: 16pt;
+            font-weight: bold;
+        }
+        h3 {
+            margin-top: 2pt;
+            font-size: 12pt;
+            font-weight: bold;
+        }
+        p {
+            font-size: 12pt;
+            margin-top: 2pt;
+        }
+        ul {
+            list-style: square;
+            padding: 10pt 0 5pt 12pt;
+            ul {
+                padding-top: 0;
+            }
+        }
     }
+
+    @include clearfix;
 }
 /*TO-DO Fix later */
 footer {
