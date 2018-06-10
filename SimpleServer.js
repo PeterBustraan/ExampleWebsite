@@ -19,7 +19,11 @@ const express   = require('express');
     exp.use(express.static(__dirname + '/script'))
 
 //Simple Page Loader
-    exp.get('/profilePicture.jpg', (res, req) => res.sendFile('profilePicture.jpg'))
+    exp.get('/profilePicture.jpg', (req, res) => res.sendFile('profilePicture.jpg'))
     exp.get('/style.css', (req, res)  => res.sendFile('style.css'))
     exp.get('/main.js', (req,res) => res.sendFile('main.js'))
     exp.get('/', (req, res) => res.render('index'))
+    //TO-DO Prevent error screen
+    exp.get('/:pageId', async (req, res) => {
+        res.render(String(req.params.pageId))
+    })

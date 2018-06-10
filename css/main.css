@@ -1,13 +1,78 @@
 /* Coolors Exported Palette - coolors.co/050609-f1f7ee-b0bea9-3c3c3c-d1dede */
 /* HSL */
 /* RGB */
-/* line 1, ../sass/_styles.scss */
+/* line 5, ../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 3, ../sass/_styles.scss */
 body {
   background-color: #05070a;
   color: #f1f7ee;
 }
 
-/* line 5, ../sass/_styles.scss */
+/* line 7, ../sass/_styles.scss */
 a {
   color: #afbda8;
   text-decoration: none;
@@ -17,46 +82,70 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
-/* line 9, ../sass/_styles.scss */
+/* line 11, ../sass/_styles.scss */
 .spacer {
   display: flex;
   justify-content: space-between;
 }
 
-/* line 13, ../sass/_styles.scss */
+/* line 15, ../sass/_styles.scss */
 .mainContent {
-  width: 700px;
+  width: 800pt;
   display: flex;
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 25%;
   justify-content: space-between;
+}
+/* line 23, ../sass/_styles.scss */
+.mainContent .sideMenu {
+  width: 10rem;
+  height: 9rem;
   background-color: #3d3d3d;
 }
-/* line 22, ../sass/_styles.scss */
-.mainContent .sideMenu {
-  width: 20%;
-}
-/* line 24, ../sass/_styles.scss */
+/* line 28, ../sass/_styles.scss */
 .mainContent .sideMenu ul {
   list-style: none;
 }
-/* line 28, ../sass/_styles.scss */
+/* line 32, ../sass/_styles.scss */
 .mainContent .sideMenu .mainMenu {
   padding-left: 1rem;
 }
-/* line 31, ../sass/_styles.scss */
+/* line 35, ../sass/_styles.scss */
 .mainContent .sideMenu .mainMenu li {
   width: 80%;
 }
-/* line 36, ../sass/_styles.scss */
+/* line 40, ../sass/_styles.scss */
 .mainContent .content {
-  width: 79%;
+  width: 55rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
+  background-color: #3d3d3d;
 }
-/* line 41, ../sass/_styles.scss */
+/* line 47, ../sass/_styles.scss */
 .mainContent .content .profile {
-  width: 20%;
+  max-width: 12rem;
+  max-height: 12rem;
   margin-right: 1rem;
+  margin-left: 1rem;
+}
+/* line 53, ../sass/_styles.scss */
+.mainContent .content .profileContent {
+  width: 40rem;
+  flex-shrink: 0;
+}
+/* line 57, ../sass/_styles.scss */
+.mainContent .content .dataContent {
+  width: 54rem;
+  margin: auto;
+  flex-shrink: 0;
+}
+
+/*TO-DO Fix later */
+/* line 65, ../sass/_styles.scss */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }

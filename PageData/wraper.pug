@@ -9,8 +9,8 @@ block link
             {name: 'Languages',     url: '/lang',    faIcon:'fa-code'},
             {name: 'Education',     url: '/edu',     faIcon:'fa-graduation-cap'},
             {name: 'Experience',    url: '/exp',     faIcon:'fa-briefcase'},
-            {name: 'Activities',    url: '/active',  faIcon:'fa-code-branch'},
-            {name: 'References',    url: '/ref',     faIcon:'fa-comments'}];
+            {name: 'Activities',    url: '/active',  faIcon:'fa-code-branch'}/*,
+            {name: 'References',    url: '/ref',     faIcon:'fa-comments'}*/];
 
 html(lang="eng/US")
 
@@ -19,8 +19,8 @@ html(lang="eng/US")
         link(rel="stylesheet",type="text/css",href="main.css")
         script(defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous")
     body
-        div.mainContent
-            div.sideMenu
+        .mainContent
+            .sideMenu
                 ul.mainMenu
                     each item in menu
                         li.spacer
@@ -29,7 +29,7 @@ html(lang="eng/US")
                                 a.selected(href=item.url, title=item.name)= item.name
                             else
                                 a(href=item.url, title=item.name)= item.name
-            div.content
+            .content
                 block content
     footer.spacer
         i.fas.fa-copyright
