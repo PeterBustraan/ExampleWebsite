@@ -4,7 +4,7 @@ block link
     
 //Incase you where wondering I just like making my code readable
 -  
-    menu = [{name: 'Profile',       url: '/',        faIcon:'fa-address-book'},
+    menu = [{name: 'Profile',       url: '/index',   faIcon:'fa-address-book'},
             {name: 'Skills',        url: '/skills',  faIcon:'fa-toolbox'},
             {name: 'Languages',     url: '/lang',    faIcon:'fa-code'},
             {name: 'Education',     url: '/edu',     faIcon:'fa-graduation-cap'},
@@ -18,6 +18,7 @@ html(lang="eng/US")
         title #{title}
         link(rel="stylesheet",type="text/css",href="main.css")
         script(defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
     body
         .mainContent
             .sideMenu
@@ -26,13 +27,20 @@ html(lang="eng/US")
                         li.spacer
                             i(class="fas "+ item.faIcon)
                             if selected == item.name
-                                a.selected(href=item.url, title=item.name)= item.name
+                                a.selected(
+                                    href    =item.url 
+                                    title   =item.name)
+                                    = item.name
                             else
-                                a(href=item.url, title=item.name)= item.name
-            .content
+                                a#test(
+                                    href    =item.url 
+                                    title   =item.name)
+                                    = item.name
+            .content#dynamicLoad
                 block content
     .clearfix
     .footer.spacer
         i.fas.fa-copyright
         p
             |test footer
+script(src="main.js")
