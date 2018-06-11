@@ -4,6 +4,7 @@ body {
     background-color: $black;
     color: $text;
     font-family: $GeneralFont;
+    height: 100%;
 }
 a {
     color: $highlight;
@@ -20,6 +21,7 @@ a {
     top:  10%;
     left: 25%;
     justify-content: space-between;
+    margin-bottom: -1rem;
 
         @media screen and (max-width: $HDWidth) {
             left: 0;
@@ -30,6 +32,7 @@ a {
             display: block;
         }
 
+    
     .sideMenu {
         width: 10rem;
         height: 15rem;
@@ -96,7 +99,9 @@ a {
         @media screen and (max-width: $TBWidth) {
             width:100%;
         }
-        
+        div{
+            margin-top:2rem;
+        }    
         .profile {
             max-width: 12rem;
             max-height: 12rem;
@@ -121,6 +126,7 @@ a {
             margin-top: 2pt;
             font-size: 16pt;
             font-weight: bold;
+            span {color: shade($text, 20%)}
         }
         h3 {
             margin-top: 2pt;
@@ -129,7 +135,7 @@ a {
         }
         p {
             font-size: 12pt;
-            margin-top: 2pt;
+            margin-top: 4pt;
         }
         ul {
             list-style: square;
@@ -140,11 +146,18 @@ a {
         }
     }
 
-    @include clearfix;
+    &:after {      
+        content: "";
+        display: block;
+        height: 1rem;
+    }
 }
 /*TO-DO Fix later */
-footer {
-    position: absolute;
-    bottom: 0;
+.clearfix {
+    clear: both;
+    @include clearfix;
+}
+.footer {
+    height:1rem;
     width: 100%;
 }
