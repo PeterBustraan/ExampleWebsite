@@ -178,11 +178,13 @@ a:hover, a:focus {
   flex-wrap: wrap;
   justify-content: flex-start;
   background-color: #3d3d3d;
+  overflow-wrap: break-word;
 }
 @media screen and (max-width: 1200px) {
   /* line 88, ../sass/_styles.scss */
   .mainContent .content {
     margin: auto;
+    display: block;
   }
 }
 @media screen and (max-width: 900px) {
@@ -191,64 +193,105 @@ a:hover, a:focus {
     width: 100%;
   }
 }
-/* line 102, ../sass/_styles.scss */
+/* line 104, ../sass/_styles.scss */
 .mainContent .content div {
   margin-top: 2rem;
 }
-/* line 105, ../sass/_styles.scss */
+/* line 107, ../sass/_styles.scss */
 .mainContent .content .profile {
   max-width: 12rem;
   max-height: 12rem;
   margin-right: 1rem;
   margin-left: 1rem;
 }
-/* line 111, ../sass/_styles.scss */
+@media screen and (max-width: 900px) {
+  /* line 107, ../sass/_styles.scss */
+  .mainContent .content .profile {
+    max-width: 20rem;
+    max-height: 20rem;
+  }
+}
+/* line 118, ../sass/_styles.scss */
 .mainContent .content .profileContent {
   width: 40rem;
-  flex-shrink: 0;
 }
-/* line 115, ../sass/_styles.scss */
+@media screen and (max-width: 900px) {
+  /* line 118, ../sass/_styles.scss */
+  .mainContent .content .profileContent {
+    width: 100%;
+  }
+}
+/* line 124, ../sass/_styles.scss */
 .mainContent .content .dataContent {
   width: 54rem;
   margin: auto;
   flex-shrink: 0;
 }
-/* line 121, ../sass/_styles.scss */
+@media screen and (max-width: 900px) {
+  /* line 124, ../sass/_styles.scss */
+  .mainContent .content .dataContent {
+    width: 100%;
+  }
+}
+/* line 132, ../sass/_styles.scss */
+.mainContent .content .multiColumn {
+  -moz-columns: 20em 2;
+  -webkit-columns: 20em 2;
+  columns: 20em 2;
+}
+@media screen and (max-width: 900px) {
+  /* line 132, ../sass/_styles.scss */
+  .mainContent .content .multiColumn {
+    -moz-columns: 0 1;
+    -webkit-columns: 0 1;
+    columns: 0 1;
+  }
+}
+/* line 140, ../sass/_styles.scss */
 .mainContent .content h1 {
   margin-top: 5pt;
   font-size: 24pt;
+  width: 100%;
+  height: 24pt;
 }
-/* line 125, ../sass/_styles.scss */
+@media screen and (max-width: 600px) {
+  /* line 140, ../sass/_styles.scss */
+  .mainContent .content h1 {
+    font-size: 20pt;
+    height: 20pt;
+  }
+}
+/* line 150, ../sass/_styles.scss */
 .mainContent .content h2 {
   margin-top: 2pt;
   font-size: 16pt;
   font-weight: bold;
 }
-/* line 129, ../sass/_styles.scss */
+/* line 154, ../sass/_styles.scss */
 .mainContent .content h2 span {
   color: #c1c6be;
 }
-/* line 131, ../sass/_styles.scss */
+/* line 156, ../sass/_styles.scss */
 .mainContent .content h3 {
   margin-top: 2pt;
   font-size: 12pt;
   font-weight: bold;
 }
-/* line 136, ../sass/_styles.scss */
+/* line 161, ../sass/_styles.scss */
 .mainContent .content p {
   font-size: 12pt;
   margin-top: 4pt;
 }
-/* line 140, ../sass/_styles.scss */
+/* line 165, ../sass/_styles.scss */
 .mainContent .content ul {
   list-style: square;
   padding: 10pt 0 5pt 12pt;
 }
-/* line 143, ../sass/_styles.scss */
+/* line 168, ../sass/_styles.scss */
 .mainContent .content ul ul {
   padding-top: 0;
 }
-/* line 149, ../sass/_styles.scss */
+/* line 174, ../sass/_styles.scss */
 .mainContent:after {
   content: "";
   display: block;
@@ -256,14 +299,14 @@ a:hover, a:focus {
 }
 
 /*TO-DO Fix later */
-/* line 156, ../sass/_styles.scss */
+/* line 181, ../sass/_styles.scss */
 .clearfix {
   clear: both;
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 160, ../sass/_styles.scss */
+/* line 185, ../sass/_styles.scss */
 .footer {
   height: 1rem;
   width: 100%;

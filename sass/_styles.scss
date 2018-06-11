@@ -91,9 +91,11 @@ a {
         flex-wrap: wrap;
         justify-content: flex-start;
         background-color: $grey;
+        overflow-wrap: break-word;
 
         @media screen and (max-width: $SDWidth) {
             margin: auto;
+            display: block;
         }
 
         @media screen and (max-width: $TBWidth) {
@@ -107,20 +109,43 @@ a {
             max-height: 12rem;
             margin-right: 1rem;
             margin-left: 1rem;
+
+            @media screen and (max-width: $TBWidth) {
+                max-width: 20rem;
+                max-height: 20rem;
+            }
         }
         .profileContent {
             width: 40rem;
-            flex-shrink: 0;
+            @media screen and (max-width: $TBWidth) {
+                width:100%;
+            }
         }
         .dataContent {
             width: 54rem;
             margin: auto;
             flex-shrink: 0;
+            @media screen and (max-width: $TBWidth) {
+                width:100%;
+            }
+        }
+        .multiColumn {
+            @include columns(20em 2);
+
+            @media screen and (max-width: $TBWidth) {
+                @include columns(0 1);
+            }
         }
 
         h1 {
             margin-top: 5pt;
             font-size: 24pt;
+            width: 100%;
+            height: 24pt;
+            @media screen and (max-width: $PHWidth){
+                font-size:20pt;
+                height: 20pt;
+            }
         }
         h2 {
             margin-top: 2pt;

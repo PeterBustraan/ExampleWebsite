@@ -1,7 +1,7 @@
 $(document).ready(()=> {
     let target = $('#dynamicLoad')
 
-    $("a").click( (event) => {
+    $(".mainMenu a").click( (event) => {
         //Prevent Links From going places
             event.preventDefault();
         //Simple Ajax Page Loader
